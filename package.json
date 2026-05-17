@@ -1,0 +1,21 @@
+{
+  "name": "tailwindcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "aos": "^2.3.4",
+    "axios": "^1.16.0",
+    "daisyui": "^5.5.19",
+    "source-map-js": "^1.2.1",
+    "tailwindcss": "^4.2.4"
+  }
+}

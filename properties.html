@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+    <!-- font awesome cdl -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- aois -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="bg-background-secondary w-full sticky top-0 z-50" data-aos="fade-down">
+        <div class="bg-[url(../assets/images/BackGroundNavBar.png)] flex h-12.25 stroke-1 bg-cover bg-center" id="note">
+            <div class="w-full flex items-center sm:justify-center gap-1.5 sm:gap-2.5">
+                <p class="font-medium max-md:text-xs max-md:pl-4">✨Discover Your Dream Property with Estatein</p>
+                <a href="#"
+                    class="cursor-pointer font-medium max-md:text-xs underline hover:text-textHover transition-all">Learn
+                    More</a>
+            </div>
+            <div class="flex items-center xl:pr-8 pr-4" id="btnClose">
+                <img src="./assets/icons/btnClose.png" alt="button close"
+                    class="p-1 bg-white/10 rounded-full hover:bg-white/20">
+            </div>
+        </div>
+        <div class="border border-border">
+            <div class="container flex justify-between items-center h-24.75">
+                <div class="flex gap-2.5 items-center">
+                    <img src="./assets/images/SymbolEstatein.png" alt="logo Estatein"
+                        class="max-md:w-7 max-md:h-7 max-xll:h-8.5 max-xll:w-8.5">
+                    <img src="./assets/images/TitleBrand.png" alt="Title Estatein"
+                        class="max-md:w-[59.5px] max-md:h-3 max-xll:w-18 max-xll:h-[14.5px]">
+                </div>
+                <nav class="max-md:hidden h-13.75 max-xll:h-11.25">
+                    <ul class="flex gap-7.5 font-medium items-center h-full">
+                        <li>
+                            <a href="index.html" class="hover:text-textHover transition-all">Home</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" class="hover:text-textHover transition-all">About
+                                Us</a>
+                        </li>
+
+                        <li class="flex items-center h-full">
+                            <a href="#"
+                                class="btn-primary h-full row hover:bg-white/10 hover:text-textHover transition-all">Properties</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="hover:text-textHover transition-all">Services</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <button
+                        class="btn-primary h-14.75 w-34 max-md:hidden transition-all hover:bg-white/10 hover:text-textHover"><a
+                            href="Contact.html">Contact
+                            Us</a></button>
+                    <img src="./assets/icons/Vector(Stroke).png" alt="menu bar" id="menuBtn"
+                        class="mr-4 cursor-pointer md:hidden">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 z-90 hidden md:hidden"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-0 h-full w-70 bg-background-secondary z-100 translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-between items-center p-6 border-b border-border">
+            <h2 class="text-xl font-semibold">Menu</h2>
+            <button id="closeMenu" class="text-2xl">
+                ✕
+            </button>
+        </div>
+        <ul class="flex flex-col p-4 gap-6 font-medium">
+            <li><a href="#" class="hover:text-textHover transition-all">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-textHover transition-all">About Us</a></li>
+            <li><a href="properties.html" class="hover:text-textHover transition-all">Properties</a></li>
+            <li><a href="services.html" class="hover:text-textHover transition-all">Services</a></li>
+            <li><a href="Contact.html" class="btn-primary flex justify-center items-center h-12 mt-4">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section>
+        <div>
+            <div class="bg-linear-to-r from-border to-transparent from-0% to-50% border border-border">
+                <div class="px-40.5 py-37.5 flex flex-col gap-3.5 container" data-aos="fade-right">
+                    <h1 class="section-title">Find Your Dream Property</h1>
+                    <p class="section-desc">Welcome to Estatein, where your dream property awaits in every corner of our
+                        beautiful world. Explore
+                        our curated selection of properties, each offering a unique story and a chance to redefine your
+                        life. With categories to suit every dreamer, your journey
+                    </p>
+                </div>
+            </div>
+            <div class="container relative sm:-top-13 top-10 searchInput" data-aos="zoom-in">
+                <form action="">
+                    <div>
+                        <div class="xl:px-37 xl:pb-2.5 sm:pb-0 pb-5">
+                            <div
+                                class="flex justify-between items-center focus-within:border-white focus-within:border-3 px-5 h-17 xl:max-3xl:h-20.25 3xl:h-25.75 bg-background shadow-[0_0_0_4px_#1A1A1A] xl:shadow-[0_0_0_10px_#1A1A1A] border border-border xl:rounded-t-2xl rounded-t-2xl max-xl:rounded-b-2xl">
+                                <input type="text" value="Search For A Property" disabled
+                                    class="lg:text-xl 2xl:text-2xl text-base outline-none w-[70%]">
+                                <div
+                                    class="flex items-center gap-[4.5px] btn-secondary 2xl:px-6 2xl:y-4.5 px-5 py-3.5 hover:bg-btnSecondary/60">
+                                    <div><img src="./assets/icons/search.png" alt="Search"></div>
+                                    <button class="max-sm:hidden findBtn">
+                                        <a href="#">Find Property</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid xl:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-3 bg-background-secondary p-2.5 rounded-xl">
+                            <div class="border border-border flex items-center bg-background justify-between rounded-2xl 2xl:p-5 px-3.5 py-3 focus-within:border-white focus-within:border-2">
+                                <div class="flex gap-2.5">
+                                    <div><img src="./assets/icons/location.png" alt="location"></div>
+                                    <div class="text-p border-l border-border pl-2.5">
+                                        <select name="locationSelect"
+                                            class="pl-1 appearance-none outline-none bg-transparent text-white pr-12 cursor-pointer locationSelect">
+                                            <option value="" selected disabled class="bg-background text-p">Location
+                                            </option>
+                                            <option class="bg-background text-white" value="Dubai">Dubai</option>
+                                            <option class="bg-background text-white" value="London">London</option>
+                                            <option class="bg-background text-white" value="California">California
+                                            </option>
+                                            <option class="bg-background text-white" value="New York">New York</option>
+                                            <option class="bg-background text-white" value="Texas">Texas</option>
+                                            <option class="bg-background text-white" value="Florida">Florida</option>
+                                            <option class="bg-background text-white" value="Berlin">Berlin</option>
+                                            <option class="bg-background text-white" value="Canada">Canada</option>
+                                            <option class="bg-background text-white" value="Tokyo">Tokyo</option>
+                                            <option class="bg-background text-white" value="Miami">Miami</option>
+                                            <option class="bg-background text-white" value="Chicago">Chicago</option>
+                                            <option class="bg-background text-white" value="Los Angeles">Los Angeles
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="p-1 h-8 w-8 row bg-button rounded-full"><img
+                                        src="./assets/icons/arrow-select.png" alt="Arrow Select"></div>
+                            </div>
+                            <div
+                                class="border border-border flex items-center bg-background justify-between rounded-2xl 2xl:p-5 px-3.5 py-3 focus-within:border-white focus-within:border-2">
+                                <div class="flex gap-2.5">
+                                    <div><img src="./assets/icons/type.png" alt="Property Type"></div>
+                                    <div class="text-p border-l border-border pl-2.5">
+                                        <select name="typeSelect"
+                                            class="pl-1 appearance-none outline-none bg-transparent text-white pr-12 cursor-pointer typeSelect">
+                                            <option value="" selected disabled class="bg-background text-p">Property
+                                                Type</option>
+                                            <option class="bg-background text-white" value="Villa">Villa</option>
+                                            <option class="bg-background text-white" value="Apartment">Apartment
+                                            </option>
+                                            <option class="bg-background text-white" value="Penthouse">Penthouse
+                                            </option>
+                                            <option class="bg-background text-white" value="Cottage">Cottage</option>
+                                            <option class="bg-background text-white" value="House">House</option>
+                                            <option class="bg-background text-white" value="Cabin">Cabin</option>
+                                            <option class="bg-background text-white" value="Studio">Studio</option>
+                                            <option class="bg-background text-white" value="Townhouse">Townhouse
+                                            </option>
+                                            <option class="bg-background text-white" value="Commercial">Commercial
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="p-1 h-8 w-8 row bg-button rounded-full"><img
+                                        src="./assets/icons/arrow-select.png" alt="Arrow Select"></div>
+                            </div>
+                            <div
+                                class="border border-border flex items-center bg-background justify-between rounded-2xl 2xl:p-5 px-3.5 py-3 focus-within:border-white focus-within:border-2">
+                                <div class="flex gap-2.5">
+                                    <div><img src="./assets/icons/size.png" alt="Property Size"></div>
+                                    <div class="text-p border-l border-border pl-2.5">
+                                        <select name="priceSelect"
+                                            class="pl-1 appearance-none outline-none bg-transparent text-white cursor-pointer priceSelect">
+                                            <option value="" selected disabled class="bg-background text-p">Pricing
+                                                Range</option>
+                                            <option class="bg-background text-white" value="0-500000">$0 - $500,000
+                                            </option>
+                                            <option class="bg-background text-white" value="500000-1000000">$500,000 -
+                                                $1,000,000
+                                            </option>
+                                            <option class="bg-background text-white" value="1000000-2000000">$1,000,000
+                                                - $2,000,000
+                                            </option>
+                                            <option class="bg-background text-white" value="2000000-4000000">$2,000,000
+                                                - $4,000,000
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="p-1 h-8 w-8 row bg-button rounded-full"><img
+                                        src="./assets/icons/arrow-select.png" alt="Arrow Select"></div>
+                            </div>
+                            <div
+                                class="border border-border flex items-center bg-background justify-between rounded-2xl 2xl:p-5 px-3.5 py-3 focus-within:border-white focus-within:border-2">
+                                <div class="flex gap-2.5">
+                                    <div><img src="./assets/icons/pricing-range.png" alt="Property Size"></div>
+                                    <div class="text-p border-l border-border pl-2.5">
+                                        <select name="sizeSelect"
+                                            class="pl-1 appearance-none outline-none bg-transparent text-white cursor-pointer sizeSelect">
+                                            <option value="" selected disabled class="bg-background text-p">Property
+                                                Size</option>
+                                            <option class="bg-background text-white" value="0-200">Small (0 - 200 sqm)
+                                            </option>
+                                            <option class="bg-background text-white" value="200-400">Medium (200 - 400
+                                                sqm)</option>
+                                            <option class="bg-background text-white" value="400-700">Large (400 - 700
+                                                sqm)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="p-1 h-8 w-8 row bg-button rounded-full"><img
+                                        src="./assets/icons/arrow-select.png" alt="Arrow Select"></div>
+                            </div>
+
+                            <div
+                                class="border border-border flex items-center bg-background justify-between rounded-2xl 2xl:p-5 px-3.5 py-3 sm:max-xl:col-span-2 focus-within:border-white focus-within:border-2">
+                                <div class="flex gap-2.5">
+                                    <div><img src="./assets/icons/year.png" alt="Build Year"></div>
+                                    <div class="text-p border-l border-border pl-2.5">
+                                        <select name="yearSelect"
+                                            class="pl-1 appearance-none outline-none bg-transparent text-white pr-12 cursor-pointer yearSelect">
+                                            <option value="" selected disabled class="bg-background text-p">Build
+                                                Year</option>
+                                            <option class="bg-background text-white" value="2017">2017</option>
+                                            <option class="bg-background text-white" value="2018">2018</option>
+                                            <option class="bg-background text-white" value="2019">2019</option>
+                                            <option class="bg-background text-white" value="2020">2020</option>
+                                            <option class="bg-background text-white" value="2021">2021</option>
+                                            <option class="bg-background text-white" value="2022">2022</option>
+                                            <option class="bg-background text-white" value="2023">2023</option>
+                                            <option class="bg-background text-white" value="2024">2024</option>
+                                            <option class="bg-background text-white" value="2025">2025</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="p-1 h-8 w-8 row bg-button rounded-full"><img
+                                        src="./assets/icons/arrow-select.png" alt="Arrow Select"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full">
+        <div class="container section-stars">
+            <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+        </div>
+        <div class="container section-head section-head--split">
+            <div class="flex flex-col gap-1.5">
+                <h2 class="section-title">
+                    Discover a World of Possibilities
+                </h2>
+                <p class="section-desc">
+                    Our portfolio of properties is as diverse as your dreams. Explore the following categories to find
+                    the perfect property that resonates with your vision of home
+                </p>
+            </div>
+            <div class="max-sm:hidden">
+                <button class="btn-primary btn-view-all hover:bg-white/10 hover:text-textHover">
+                    View All Properties
+                </button>
+            </div>
+        </div>
+        <div class="container cardJS grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7.5 3xl:mt-20 mt-10 min-h-126.5 3xl:min-h-173 ml-4">
+
+        </div>
+        <div class="section-pagination container">
+            <div class="section-pagination__mobile">
+                <button
+                    class="btn-primary text-sm 3xl:text-lg py-3.5 p-3 3xl:py-4.5 hover:bg-white/10 hover:text-textHover max-[370px]:text-xs">
+                    View All Testimonials
+                </button>
+            </div>
+            <div>
+                <p class="max-sm:hidden 3xl:text-xl sm:text-base cardCounter"><span>01</span> of 10</p>
+            </div>
+            <div class="flex gap-2.5 max-sm:w-full justify-end">
+                <img src="./assets/icons/left-arrow.png" alt="left Arrow"
+                    class="section-pagination__arrow section-pagination__arrow--prev leftArrow">
+                <div class="sm:hidden flex">
+                    <p class="sm:hidden row gap-1 text-xs text-p cardCounter"><span class="text-white">01</span> of 10
+                    </p>
+                </div>
+                <img src="./assets/icons/right-arrow.png" alt="right Arrow"
+                    class="section-pagination__arrow section-pagination__arrow--next rightArrow">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container">
+            <div class="flex flex-col gap-1.5">
+                <h2 class="section-title">
+                    Let's Make it Happen
+                </h2>
+                <p class="section-desc">
+                    Ready to take the first step toward your dream property? Fill out the form below, and our real
+                    estate wizards will work their magic to find your perfect match. Don't wait; let's embark on this
+                    exciting journey together.
+                </p>
+            </div>
+            <div class="pt-20">
+                <form class="contactForm">
+                    <div
+                        class="border border-border rounded-2xl 2xl:rounded-sm p-5 2xl:p-25 grid md:grid-cols-2 2xl:grid-cols-4 xl:grid-cols-3 gap-12.5 hover:shadow-[0_0_0_10px_#191919] transition-all">
+
+                        <div class="flex flex-col gap-4">
+                            <label for="first-name" class="font-semibold text-xl">First Name</label>
+                            <input type="text" placeholder="Enter First Name" name="first-name" id="first-name"
+                                class="form-input firstName">
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="last-name" class="font-semibold text-xl">Last Name</label>
+                            <input type="text" placeholder="Enter Last Name" name="last-name" id="last-name"
+                                class="form-input lastName">
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="email" class="font-semibold text-xl">Email</label>
+                            <input type="email" placeholder="Enter your Name" name="email" id="email"
+                                class="form-input email">
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="phone-number" class="font-semibold text-xl">Phone</label>
+                            <input type="number" placeholder="Enter Phone Number" name="phone-number" id="phone-number"
+                                class="form-input phone">
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="preferred-location" class="font-semibold text-xl">Preferred Location</label>
+                            <div class="select-box">
+                                <select name="preferred-location" id="preferred-location"
+                                    class="appearance-none w-full outline-none formLocation text-white">
+                                    <option value="" selected disabled class="bg-background text-p">Location
+                                    </option>
+                                    <option class="bg-background text-white" value="Dubai">Dubai</option>
+                                    <option class="bg-background text-white" value="London">London</option>
+                                    <option class="bg-background text-white" value="California">California</option>
+                                    <option class="bg-background text-white" value="New York">New York</option>
+                                    <option class="bg-background text-white" value="Texas">Texas</option>
+                                    <option class="bg-background text-white" value="Florida">Florida</option>
+                                    <option class="bg-background text-white" value="Berlin">Berlin</option>
+                                    <option class="bg-background text-white" value="Canada">Canada</option>
+                                    <option class="bg-background text-white" value="Tokyo">Tokyo</option>
+                                    <option class="bg-background text-white" value="Miami">Miami</option>
+                                    <option class="bg-background text-white" value="Chicago">Chicago</option>
+                                    <option class="bg-background text-white" value="Los Angeles">Los Angeles</option>
+                                </select>
+                                <div class="select-icon">
+                                    <img src="./assets/icons/arrow-select.png" alt="Arrow Select">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="property-type" class="font-semibold text-xl">Property Type</label>
+                            <div class="select-box">
+                                <select name="property-type" id="property-type"
+                                    class="appearance-none w-full outline-none propertyType text-white">
+                                    <option value="" selected disabled class="bg-background text-p">Property Type
+                                    </option>
+                                    <option class="bg-background text-white" value="Villa">Villa</option>
+                                    <option class="bg-background text-white" value="Apartment">Apartment</option>
+                                    <option class="bg-background text-white" value="Penthouse">Penthouse</option>
+                                    <option class="bg-background text-white" value="Cottage">Cottage</option>
+                                    <option class="bg-background text-white" value="House">House</option>
+                                    <option class="bg-background text-white" value="Cabin">Cabin</option>
+                                    <option class="bg-background text-white" value="Studio">Studio</option>
+                                    <option class="bg-background text-white" value="Townhouse">Townhouse</option>
+                                    <option class="bg-background text-white" value="Commercial">Commercial</option>
+                                </select>
+                                <div class="select-icon">
+                                    <img src="./assets/icons/arrow-select.png" alt="Arrow Select">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <label for="bedrooms" class="font-semibold text-xl">No. of Bedrooms</label>
+                            <div class="select-box">
+                                <select name="bedrooms" id="bedrooms"
+                                    class="appearance-none text-white w-full outline-none bedrooms">
+                                    <option value="" selected disabled class="bg-background text-p">Select no. of
+                                        Bedrooms
+                                    </option>
+                                    <option class="bg-background text-white" value="1">Bedroom 1</option>
+                                    <option class="bg-background text-white" value="2">Bedroom 2</option>
+                                    <option class="bg-background text-white" value="3">Bedroom 3</option>
+                                    <option class="bg-background text-white" value="4">Bedroom 4</option>
+                                    <option class="bg-background text-white" value="5">Bedroom 5</option>
+                                    <option class="bg-background text-white" value="6+">Bedroom +6</option>
+                                </select>
+                                <div class="select-icon">
+                                    <img src="./assets/icons/arrow-select.png" alt="Arrow Select">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 xl:max-2xl:col-span-2">
+                            <label for="bedrooms2" class="font-semibold text-xl">No. of Bathrooms</label>
+                            <div class="select-box">
+                                <select name="bedrooms2" id="bedrooms2"
+                                    class="appearance-none text-white w-full outline-none bathrooms">
+                                    <option value="" selected disabled class="bg-background text-p">Select no. of
+                                        Bathrooms
+                                    </option>
+                                    <option class="bg-background text-white" value="1">Bathrooms 1</option>
+                                    <option class="bg-background text-white" value="2">Bathrooms 2</option>
+                                    <option class="bg-background text-white" value="3">Bathrooms 3</option>
+                                    <option class="bg-background text-white" value="4">Bathrooms 4</option>
+                                    <option class="bg-background text-white" value="5+">Bathrooms 5+</option>
+                                </select>
+                                <div class="select-icon">
+                                    <img src="./assets/icons/arrow-select.png" alt="Arrow Select">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 col-span-1 2xl:col-span-2 md:max-xl:col-span-2">
+                            <label for="budget" class="font-semibold text-xl">Budget</label>
+                            <div class="select-box">
+                                <select name="budget" id="budget"
+                                    class="appearance-none text-white w-full outline-none budget">
+                                    <option value="" selected disabled class="bg-background text-p">Select Budget
+                                    </option>
+                                    <option value="" selected disabled class="bg-background text-white">Pricing Range</option>
+                                    <option class="bg-background text-white" value="0-500000">$0 - $500,000
+                                    </option>
+                                    <option class="bg-background text-white" value="500000-1000000">$500,000 -
+                                        $1,000,000
+                                    </option>
+                                    <option class="bg-background text-white" value="1000000-2000000">$1,000,000
+                                        - $2,000,000
+                                    </option>
+                                    <option class="bg-background text-white" value="2000000-4000000">$2,000,000
+                                        - $4,000,000
+                                    </option>
+                                </select>
+                                <div class="select-icon">
+                                    <img src="./assets/icons/arrow-select.png" alt="Arrow Select">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 md:col-span-2">
+                            <label for="phone-number2" class="font-semibold text-xl">Preferred Contact Method</label>
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="select-box w-full">
+                                    <div class="p-1 h-8 w-8 row">
+                                        <img src="./assets/icons/phone.png" alt="phone">
+                                    </div>
+                                    <div>
+                                        <input type="number" placeholder="Enter Phone Number" name="phone-number"
+                                            id="phone-number2" class="text-lg outline-none">
+                                    </div>
+                                    <div class="p-1 h-8 w-8 row">
+                                        <img src="./assets/icons/point.png" alt="point">
+                                    </div>
+                                </div>
+                                <div class="select-box w-full">
+                                    <div class="p-1 h-8 w-8 row">
+                                        <img src="./assets/icons/email.png" alt="Email">
+                                    </div>
+                                    <div>
+                                        <input type="email" placeholder="Enter Your Email" name="email" id="email"
+                                            class="text-lg outline-none">
+                                    </div>
+                                    <div class="p-1 h-8 w-8 row">
+                                        <img src="./assets/icons/point-empty.png" alt="Point Emtpy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 2xl:col-span-4 md:col-span-2 xl:max-2xl:col-span-3">
+                            <label for="message" class="font-semibold text-xl">Message</label>
+                            <textarea name="message" id="message" placeholder="Enter your Message here.."
+                                class="form-input pb-42.5 message"></textarea>
+                        </div>
+
+                        <div
+                            class="flex gap-2.5 2xl:col-span-3 items-center md:max-lg:col-span-2 xl:max-2xl:col-span-2 md:max-lg:justify-center">
+                            <input type="checkbox" name="Privacy" id="Privacy"
+                                class="terms border border-border appearance-none rounded-sm bg-background-secondary  checked:bg-btnSecondary w-6 h-6">
+                            <label for="Privacy" class="font-semibold text-lg text-p">I agree with Terms of Use and
+                                Privacy Policy</label>
+                        </div>
+
+                        <div class="flex md:max-lg:justify-center lg:justify-end md:max-lg:col-span-2 w-full">
+                            <button class="btn-secondary px-15 py-4.5 hover:bg-btnSecondary/60 submitBtn">
+                                Send Your Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section
+        class="relative overflow-hidden mt-20 px-4 py-12.5 sm:max-3xl:px-20 sm:max-3xl:py-14.75 3xl:px-40.5 3xl:py-25 w-full border border-border">
+        <div
+            class="absolute lg:-left-5 -left-29 lg:bottom-0 max-lg:-top-5.25 h-71 max-lg:rotate-90 w-130.5 lg:w-1/4 bg-[url('../assets/images/CTA/CTA_BackGround.png')] bg-no-repeat bg-left bg-cover">
+        </div>
+        <div class=" absolute -right-22.5 -bottom-22.5 lg:-right-22.5 lg:top-0 h-full w-full lg:w-1/3
+            bg-[url('../assets/images/CTA/CTA_BackGround_2.png')] bg-no-repeat bg-right bg-cover"></div>
+        <div
+            class="container relative z-10 flex justify-between items-center lg:max-3xl:gap-37.5 3xl:gap-62.5 max-lg:flex-col gap-7.5">
+            <div class="flex flex-col 3xl:gap-3.5 sm:max-3xl:gap-2.5 gap-1.5">
+                <h2 class="3xl:text-5xl sm:max-3xl:text-[38px] text-[28px] font-semibold leading-[150%]">Start Your Real
+                    Estate
+                    Journey Today</h2>
+                <p class="3xl:text-lg leading-[150%] text-p text-sm sm:max-3xl:text-base">
+                    Your dream property is just a click away. Whether you're looking for a new home, a strategic
+                    investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take
+                    the first step towards your real estate goals and explore our available properties or get in touch
+                    with our team for personalized assistance.
+                </p>
+            </div>
+            <div class="max-sm:w-full">
+                <button
+                    class="btn-secondary 3xl:text-lg w-full py-3.5 text-sm sm:max-3xl:py-3.5 sm:max-3xl:px-5 3xl:py-4.5 3xl:px-6 mt-6 hover:bg-btnSecondary/60 whitespace-nowrap">
+                    Explore Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full" data-aos="fade-up">
+        <div
+            class="container bg py-12.5 3xl:py-25 3xl:px-40.5 border-t border-border flex xl:justify-between xl:items-center gap-20 max-xl:flex-col">
+            <div class="flex flex-col gap-7.5 3xl:min-w-134.5">
+                <div>
+                    <div class="flex gap-2.75 items-center">
+                        <img src="./assets/images/slogan-estatein.png" alt="Estatein Logo">
+                        <img src="./assets/images/TitleBrand.png" alt="Title Brand" class="h-full">
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-between gap-2.5 border border-border rounded-xl 3xl:px-6 3xl:py-4.5 px-5 py-3.5 sm:max-xl:w-1/2 w-full max-w-full 3xl:max-w-105.75 focus-within:border-white focus-within:border-2 transition">
+                    <div class="flex items-center gap-2.5">
+                        <img src="./assets/icons/email-box.png" alt="Email Box">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="bg-transparent placeholder:text-p outline-none border-none">
+                    </div>
+                    <button class="flex items-center justify-center rounded-full hover:bg-white/10 transition">
+                        <img src="./assets/icons/Send.png" alt="Send">
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 lg:grid-cols-5 lg:gap-3">
+                <div class="max-lg:border-r max-lg:border-border max-lg:pr-10">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Home</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Hero
+                                    Section</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Features</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Properties</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">FAQ's</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">About Us</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Story</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Works</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Team</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Clients</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-4 3xl:gap-7.5 max-lg:row-start-2 max-lg:col-start-2 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Services</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Valuation
+                                Mastery</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Strategic
+                                Marketing</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Negotiation
+                                Wizardry</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Closing
+                                Success</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Property
+                                Management</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="max-lg:col-span-1 max-lg:row-start-2 max-lg:border-r max-lg:border-border max-lg:pr-10 lg:col-start-3 lg:row-start-1">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">
+                            Properties</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Portfolio</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end pt-4 max-lg:border-b max-lg:border-border max-lg:pb-4 lg:hidden">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact
+                            Us</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                    Form</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                    Offices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end max-lg:hidden">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact Us
+                    </h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                Form</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-background-secondary py-7.5">
+            <div class="container justify-center md:justify-between items-center flex max-md:flex-col max-md:gap-5">
+                <div class="flex 3xl:gap-9.5 gap-2.5 max-md:order-2 max-md:flex-col items-center">
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">@2023 Estatein.
+                        All Rights Reserved.</p>
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">Terms &
+                        Conditions</p>
+                </div>
+                <div class="flex gap-2.5 max-md:order-1">
+                    <img src="./assets/icons/facebook.png" alt="facebook"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/linkedin.png" alt="linkedin"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/twitter.png" alt="twitter"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/youtube.png" alt="youtube"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="properties.js"></script>
+</body>
+
+</html>

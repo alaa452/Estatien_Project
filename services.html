@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- font awesome cdl -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- aois -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<script>
+    AOS.init();
+</script>
+
+<body>
+
+    <header class="bg-background-secondary w-full sticky top-0 z-50" data-aos="fade-down">
+        <div class="bg-[url(../assets/images/BackGroundNavBar.png)] flex h-12.25 stroke-1 bg-cover bg-center" id="note">
+            <div class="w-full flex items-center sm:justify-center gap-1.5 sm:gap-2.5">
+                <p class="font-medium max-md:text-xs max-md:pl-4">✨Discover Your Dream Property with Estatein</p>
+                <a href="#"
+                    class="cursor-pointer font-medium max-md:text-xs underline hover:text-textHover transition-all">Learn
+                    More</a>
+            </div>
+            <div class="flex items-center xl:pr-8 pr-4" id="btnClose">
+                <img src="./assets/icons/btnClose.png" alt="button close"
+                    class="p-1 bg-white/10 rounded-full hover:bg-white/20">
+            </div>
+        </div>
+        <div class="border border-border">
+            <div class="container flex justify-between items-center h-24.75">
+                <div class="flex gap-2.5 items-center">
+                    <img src="./assets/images/SymbolEstatein.png" alt="logo Estatein"
+                        class="max-md:w-7 max-md:h-7 max-xll:h-8.5 max-xll:w-8.5">
+                    <img src="./assets/images/TitleBrand.png" alt="Title Estatein"
+                        class="max-md:w-[59.5px] max-md:h-3 max-xll:w-18 max-xll:h-[14.5px]">
+                </div>
+                <nav class="max-md:hidden h-13.75 max-xll:h-11.25">
+                    <ul class="flex gap-7.5 font-medium items-center h-full">
+                        <li>
+                            <a href="index.html" class="hover:text-textHover transition-all">Home</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html" class="hover:text-textHover transition-all">About
+                                Us</a>
+                        </li>
+
+                        <li>
+                            <a href="properties.html" class="hover:text-textHover transition-all">Properties</a>
+                        </li>
+                        <li class="flex items-center h-full">
+                            <a href="#"
+                                class="btn-primary h-full row hover:bg-white/10 hover:text-textHover transition-all">Services</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <button
+                        class="btn-primary h-14.75 w-34 max-md:hidden transition-all hover:bg-white/10 hover:text-textHover"><a
+                            href="Contact.html">Contact
+                            Us</a></button>
+                    <img src="./assets/icons/Vector(Stroke).png" alt="menu bar" id="menuBtn"
+                        class="mr-4 cursor-pointer md:hidden">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 z-90 hidden md:hidden"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-0 h-full w-70 bg-background-secondary z-100 translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-between items-center p-6 border-b border-border">
+            <h2 class="text-xl font-semibold">Menu</h2>
+            <button id="closeMenu" class="text-2xl">
+                ✕
+            </button>
+        </div>
+        <ul class="flex flex-col p-4 gap-6 font-medium">
+            <li><a href="#" class="hover:text-textHover transition-all">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-textHover transition-all">About Us</a></li>
+            <li><a href="properties.html" class="hover:text-textHover transition-all">Properties</a></li>
+            <li><a href="services.html" class="hover:text-textHover transition-all">Services</a></li>
+            <li><a href="Contact.html" class="btn-primary flex justify-center items-center h-12 mt-4">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section>
+        <div>
+            <div class="bg-linear-to-r from-border to-transparent from-0% to-50% border border-border">
+                <div data-aos="fade-right"
+                    class="px-4 py-12.5 2xl:pl-40.5 2xl:pr-100 2xl:pt-37.5 2xl:pb-25 xl:pl-20 xl:pr-25 xl:py-25 flex flex-col gap-3.5 container">
+                    <h1 class="section-title">Elevate Your Real Estate Experience</h1>
+                    <p class="section-desc">Welcome to Estatein, where your real estate aspirations meet expert
+                        guidance. Explore our comprehensive range of services, each designed to cater to your unique
+                        needs and dreams.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full border-t border-border bg-background">
+                <div class="w-full">
+
+                    <div class="border border-border shadow-[0_0_0_10px_#191919] p-4 sm:p-6">
+
+                        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5 bg-background">
+
+                            <div class="hero-feature-card" data-aos="zoom-in-right">
+                                <img src="./assets/icons/Arrow-Up-Right.png" alt="Arrow"
+                                    class="hero-feature-card__arrow" />
+
+                                <img src="./assets/icons/Icon-Container1.png" alt="Icon"
+                                    class="hero-feature-card__icon" />
+
+                                <p class="font-semibold text-xs sm:text-base lg:text-lg text-center ">
+                                    Find Your Dream Home
+                                </p>
+                            </div>
+
+                            <div class="hero-feature-card" data-aos="zoom-in-right">
+                                <img src="./assets/icons/Arrow-Up-Right.png" alt="Arrow"
+                                    class="hero-feature-card__arrow" />
+
+                                <img src="./assets/icons/Icon-Container2.png" alt="Icon"
+                                    class="hero-feature-card__icon " />
+
+                                <p class="font-semibold text-xs sm:text-base lg:text-lg text-center">
+                                    Unlock Property Value
+                                </p>
+                            </div>
+
+                            <div class="hero-feature-card" data-aos="zoom-in-left">
+                                <img src="./assets/icons/Arrow-Up-Right.png" alt="Arrow"
+                                    class="hero-feature-card__arrow" />
+
+                                <img src="./assets/icons/Icon-Container3.png" alt="Icon"
+                                    class="hero-feature-card__icon" />
+
+                                <p class="hero-feature-card__title">
+                                    Effortless Property Management
+                                </p>
+                            </div>
+
+                            <div class="hero-feature-card" data-aos="zoom-in-left">
+                                <img src="./assets/icons/Arrow-Up-Right.png" alt="Arrow"
+                                    class="hero-feature-card__arrow" />
+
+                                <img src="./assets/icons/Icon-Container4.png" alt="Icon"
+                                    class="hero-feature-card__icon" />
+                                <p class="hero-feature-card__title">
+                                    Smart Investments, Informed Decisions
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-10 2xl:gap-20">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="flex flex-col gap-3.5 max-w-324.25">
+                    <h1 class="section-title">
+                        Unlock Property Value
+                    </h1>
+
+                    <p class="section-desc">
+                        Selling your property should be a rewarding experience, and at Estatein, we make sure it is. Our
+                        Property Selling Service is designed to maximize the value of your property, ensuring you get
+                        the best deal possible. Explore the categories below to see how we can help you at every step of
+                        your selling journey
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 2xl:gap-7.5">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/valuation-masteryIcon.png" alt="Valuation Mastery" class="card-icon">
+                        <h3 class="card-title ">Valuation Mastery</h3>
+                    </div>
+                    <p class="card-desc">
+                        Discover the true worth of your property with our expert valuation services.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/Strategic-marketingIcon.png" alt="Strategic Marketing"
+                            class="card-icon">
+                        <h3 class="card-title ">Strategic Marketing</h3>
+                    </div>
+                    <p class="card-desc">
+                        Selling a property requires more than just a listing; it demands a strategic marketing approach.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/negotiation-wizardryIcon.png" alt="Negotiation Wizardry"
+                            class="card-icon">
+                        <h3 class="card-title ">Negotiation Wizardry</h3>
+                    </div>
+                    <p class="card-desc">
+                        Negotiating the best deal is an art, and our negotiation experts are masters of it.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/closing-successIcon.png" alt="Closing Success" class="card-icon">
+                        <h3 class="card-title ">Closing Success</h3>
+                    </div>
+                    <p class="card-desc">
+                        A successful sale is not complete until the closing. We guide you through the intricate closing
+                        process.
+                    </p>
+                </div>
+
+                <div
+                    class="border border-border rounded-xl flex flex-col gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5 lg:col-span-2 bg-[url(../assets/images/bg-unlock-property.png)]">
+                    <div class="flex max-lg:flex-col max-lg:gap-5 lg:items-center justify-between">
+                        <h3 class="2xl:text-[30px] lg:text-2xl text-xl font-semibold">Unlock the Value of Your Property
+                            Today</h3>
+                        <button class="btn-outline">Learn
+                            More</button>
+                    </div>
+                    <p class="card-desc">
+                        Ready to unlock the true value of your property? Explore our Property Selling Service categories
+                        and let us help you achieve the best deal possible for your valuable asset.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-10 2xl:gap-20">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="flex flex-col gap-3.5 max-w-324.25">
+                    <h1 class="section-title">
+                        Effortless Property Management
+                    </h1>
+
+                    <p class="section-desc">
+                        Owning a property should be a pleasure, not a hassle. Estatein's Property Management Service
+                        takes the stress out of property ownership, offering comprehensive solutions tailored to your
+                        needs. Explore the categories below to see how we can make property management effortless for
+                        you
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 2xl:gap-7.5">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/Tenant-harmonyIcon.png" alt="Tenant Harmony" class="card-icon">
+                        <h3 class="card-title ">Tenant Harmony</h3>
+                    </div>
+                    <p class="card-desc">
+                        Our Tenant Management services ensure that your tenants have a smooth and reducing vacancies.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/maintenance-easeIcon.png" alt="Maintenance Ease" class="card-icon">
+                        <h3 class="card-title ">Maintenance Ease</h3>
+                    </div>
+                    <p class="card-desc">
+                        Say goodbye to property maintenance headaches. We handle all aspects of property upkeep.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/financial-peaceIcon.png" alt="Financial Peace of Mind"
+                            class="card-icon">
+                        <h3 class="card-title ">Financial Peace of Mind</h3>
+                    </div>
+                    <p class="card-desc">
+                        Managing property finances can be complex. Our financial experts take care of rent collection
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./assets/icons/legal-guardianIcon.png" alt="Legal Guardian" class="card-icon">
+                        <h3 class="card-title ">Legal Guardian</h3>
+                    </div>
+                    <p class="card-desc">
+                        Stay compliant with property laws and regulations effortlessly.
+                    </p>
+                </div>
+
+                <div
+                    class="border border-border rounded-xl flex flex-col gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5 lg:col-span-2 bg-[url(../assets/images/bg-unlock-property.png)] bg-cover">
+                    <div class="flex max-lg:flex-col max-lg:gap-5 lg:items-center justify-between">
+                        <h3 class="2xl:text-[30px] lg:text-2xl text-xl font-semibold">Experience Effortless Property
+                            Management</h3>
+                        <button class="btn-outline">Learn
+                            More</button>
+                    </div>
+                    <p class="card-desc">
+                        Ready to experience hassle-free property management? Explore our Property Management Service
+                        categories and let us handle the complexities while you enjoy the benefits of property
+                        ownership.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex max-lg:flex-col gap-10 lg:gap-12.5 2xl:gap-15">
+            <div class="flex flex-col 2xl:gap-12.5 gap-7.5 lg:gap-10">
+                <div>
+                    <div class="-translate-x-4 pb-0">
+                        <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                    </div>
+
+                    <div class="flex flex-col gap-3.5 max-w-324.25">
+                        <h1 class="section-title">
+                            Smart Investments, Informed Decisions
+                        </h1>
+
+                        <p class="section-desc">
+                            Building a real estate portfolio requires a strategic approach. <span
+                                class="max-lg:hidden">Estatein's Investment
+                                Advisory
+                                Service empowers you to make smart investments and informed decisions.</span>
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="border border-border rounded-xl flex flex-col gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5 bg-[url(../assets/images/bg-unlock-property.png)] bg-cover">
+                    <h3 class="card-title ">Unlock Your Investment Potential
+                    </h3>
+
+                    <p class="text-p lg:text-[#E4E4E7] 2xl:text-lg lg:text-base text-sm">
+                        Explore our Property Management Service categories and let us handle the complexities while you
+                        enjoy the benefits of property ownership.
+                    </p>
+
+                    <button class="btn-outline">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-2.5 border border-border shadow-[0_0_0_10px_#191919] rounded-2xl">
+                <div
+                    class="border border-border rounded-xl flex flex-col shadow-[0_0_0_10px_#191919] gap-4 lg:gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5">
+                    <div class="card-header">
+                        <img src="./assets/icons/valuation-masteryIcon.png" alt="Market Insight" class="card-icon">
+                        <h3 class="card-title ">Market Insight</h3>
+                    </div>
+                    <p class="card-desc">
+                        Stay ahead of market trends with our expert Market Analysis. We provide in-depth insights into
+                        real estate market conditions
+                    </p>
+                </div>
+
+                <div
+                    class="border border-border rounded-xl flex flex-col shadow-[0_0_0_10px_#191919] gap-4 lg:gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5">
+                    <div class="card-header">
+                        <img src="./assets/icons/roi-assessmentIcon.png" alt="ROI Assessment" class="card-icon">
+                        <h3 class="card-title ">ROI Assessment</h3>
+                    </div>
+                    <p class="card-desc">
+                        Make investment decisions with confidence. Our ROI Assessment services evaluate the potential
+                        returns on your investments
+                    </p>
+                </div>
+
+                <div
+                    class="border border-border rounded-xl flex flex-col shadow-[0_0_0_10px_#191919] gap-4 lg:gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5">
+                    <div class="card-header">
+                        <img src="./assets/icons/customized-strategiesIcon.png" alt="Customized Strategies"
+                            class="card-icon">
+                        <h3 class="card-title ">Customized Strategies</h3>
+                    </div>
+                    <p class="card-desc">
+                        Every investor is unique, and so are their goals. We develop Customized Investment Strategies
+                        tailored to your specific needs
+                    </p>
+                </div>
+
+                <div
+                    class="border border-border rounded-xl flex flex-col shadow-[0_0_0_10px_#191919] gap-4 lg:gap-5 2xl:gap-7.5 p-6 lg:p-10 2xl:p-12.5">
+                    <div class="card-header">
+                        <img src="./assets/icons/legal-guardianIcon.png" alt="Diversification Mastery"
+                            class="card-icon">
+                        <h3 class="card-title ">Diversification Mastery</h3>
+                    </div>
+                    <p class="card-desc">
+                        Diversify your real estate portfolio effectively. Our experts guide you in spreading your
+                        investments across various property types and locations
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section
+        class="relative overflow-hidden mt-20 px-4 py-12.5 sm:max-3xl:px-20 sm:max-3xl:py-14.75 3xl:px-40.5 3xl:py-25 w-full border border-border">
+        <div
+            class="absolute lg:-left-5 -left-29 lg:bottom-0 max-lg:-top-5.25 h-71 max-lg:rotate-90 w-130.5 lg:w-1/4 bg-[url('../assets/images/CTA/CTA_BackGround.png')] bg-no-repeat bg-left bg-cover">
+        </div>
+        <div class=" absolute -right-22.5 -bottom-22.5 lg:-right-22.5 lg:top-0 h-full w-full lg:w-1/3
+            bg-[url('../assets/images/CTA/CTA_BackGround_2.png')] bg-no-repeat bg-right bg-cover"></div>
+        <div
+            class="container relative z-10 flex justify-between items-center lg:max-3xl:gap-37.5 3xl:gap-62.5 max-lg:flex-col gap-7.5">
+            <div class="flex flex-col 3xl:gap-3.5 sm:max-3xl:gap-2.5 gap-1.5">
+                <h2 class="3xl:text-5xl sm:max-3xl:text-[38px] text-[28px] font-semibold leading-[150%]">Start Your Real
+                    Estate
+                    Journey Today</h2>
+                <p class="3xl:text-lg leading-[150%] text-p text-sm sm:max-3xl:text-base">
+                    Your dream property is just a click away. Whether you're looking for a new home, a strategic
+                    investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take
+                    the first step towards your real estate goals and explore our available properties or get in touch
+                    with our team for personalized assistance.
+                </p>
+            </div>
+            <div class="max-sm:w-full">
+                <button
+                    class="btn-secondary 3xl:text-lg w-full py-3.5 text-sm sm:max-3xl:py-3.5 sm:max-3xl:px-5 3xl:py-4.5 3xl:px-6 mt-6 hover:bg-btnSecondary/60 whitespace-nowrap">
+                    Explore Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full" data-aos="fade-up">
+        <div
+            class="container bg py-12.5 3xl:py-25 3xl:px-40.5 border-t border-border flex xl:justify-between xl:items-center gap-20 max-xl:flex-col">
+            <div class="flex flex-col gap-7.5 3xl:min-w-134.5">
+                <div>
+                    <div class="flex gap-2.75 items-center">
+                        <img src="./assets/images/slogan-estatein.png" alt="Estatein Logo">
+                        <img src="./assets/images/TitleBrand.png" alt="Title Brand" class="h-full">
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-between gap-2.5 border border-border rounded-xl 3xl:px-6 3xl:py-4.5 px-5 py-3.5 sm:max-xl:w-1/2 w-full max-w-full 3xl:max-w-105.75 focus-within:border-white focus-within:border-2 transition">
+                    <div class="flex items-center gap-2.5">
+                        <img src="./assets/icons/email-box.png" alt="Email Box">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="bg-transparent placeholder:text-p outline-none border-none">
+                    </div>
+                    <button class="flex items-center justify-center rounded-full hover:bg-white/10 transition">
+                        <img src="./assets/icons/Send.png" alt="Send">
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 lg:grid-cols-5 lg:gap-3">
+                <div class="max-lg:border-r max-lg:border-border max-lg:pr-10">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Home</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Hero
+                                    Section</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Features</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Properties</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">FAQ's</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">About Us</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Story</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Works</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Team</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Clients</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-4 3xl:gap-7.5 max-lg:row-start-2 max-lg:col-start-2 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Services</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Valuation
+                                Mastery</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Strategic
+                                Marketing</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Negotiation
+                                Wizardry</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Closing
+                                Success</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Property
+                                Management</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="max-lg:col-span-1 max-lg:row-start-2 max-lg:border-r max-lg:border-border max-lg:pr-10 lg:col-start-3 lg:row-start-1">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">
+                            Properties</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Portfolio</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end pt-4 max-lg:border-b max-lg:border-border max-lg:pb-4 lg:hidden">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact
+                            Us</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                    Form</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                    Offices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end max-lg:hidden">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact Us
+                    </h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                Form</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-background-secondary py-7.5">
+            <div class="container justify-center md:justify-between items-center flex max-md:flex-col max-md:gap-5">
+                <div class="flex 3xl:gap-9.5 gap-2.5 max-md:order-2 max-md:flex-col items-center">
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">@2023 Estatein.
+                        All Rights Reserved.</p>
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">Terms &
+                        Conditions</p>
+                </div>
+                <div class="flex gap-2.5 max-md:order-1">
+                    <img src="./assets/icons/facebook.png" alt="facebook"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/linkedin.png" alt="linkedin"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/twitter.png" alt="twitter"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/youtube.png" alt="youtube"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>

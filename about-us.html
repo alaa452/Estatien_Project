@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- font awesome cdl -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- aois -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body>
+    <header class="bg-background-secondary w-full sticky top-0 z-50" data-aos="fade-down">
+        <div class="bg-[url(../assets/images/BackGroundNavBar.png)] flex h-12.25 stroke-1 bg-cover bg-center" id="note">
+            <div class="w-full flex items-center sm:justify-center gap-1.5 sm:gap-2.5">
+                <p class="font-medium max-md:text-xs max-md:pl-4">✨Discover Your Dream Property with Estatein</p>
+                <a href="#"
+                    class="cursor-pointer font-medium max-md:text-xs underline hover:text-textHover transition-all">Learn
+                    More</a>
+            </div>
+            <div class="flex items-center xl:pr-8 pr-4" id="btnClose">
+                <img src="./assets/icons/btnClose.png" alt="button close"
+                    class="p-1 bg-white/10 rounded-full hover:bg-white/20">
+            </div>
+        </div>
+        <div class="border border-border">
+            <div class="container flex justify-between items-center h-24.75">
+                <div class="flex gap-2.5 items-center">
+                    <img src="./assets/images/SymbolEstatein.png" alt="logo Estatein"
+                        class="max-md:w-7 max-md:h-7 max-xll:h-8.5 max-xll:w-8.5">
+                    <img src="./assets/images/TitleBrand.png" alt="Title Estatein"
+                        class="max-md:w-[59.5px] max-md:h-3 max-xll:w-18 max-xll:h-[14.5px]">
+                </div>
+                <nav class="max-md:hidden h-13.75 max-xll:h-11.25">
+                    <ul class="flex gap-7.5 font-medium items-center h-full">
+                        <li>
+                            <a href="index.html" class="hover:text-textHover transition-all">Home</a>
+                        </li>
+                        <li class="flex items-center h-full">
+                            <a href="#"
+                                class="btn-primary h-full row hover:bg-white/10 hover:text-textHover transition-all">About
+                                Us</a>
+                        </li>
+
+                        <li>
+                            <a href="properties.html" class="hover:text-textHover transition-all">Properties</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="hover:text-textHover transition-all">Services</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    <button
+                        class="btn-primary h-14.75 w-34 max-md:hidden transition-all hover:bg-white/10 hover:text-textHover"><a
+                            href="Contact.html">Contact
+                            Us</a></button>
+                    <img src="./assets/icons/Vector(Stroke).png" alt="menu bar" id="menuBtn"
+                        class="mr-4 cursor-pointer md:hidden">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 z-90 hidden md:hidden"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-0 h-full w-70 bg-background-secondary z-100 translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex justify-between items-center p-6 border-b border-border">
+            <h2 class="text-xl font-semibold">Menu</h2>
+            <button id="closeMenu" class="text-2xl">
+                ✕
+            </button>
+        </div>
+        <ul class="flex flex-col p-4 gap-6 font-medium">
+            <li><a href="#" class="hover:text-textHover transition-all">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-textHover transition-all">About Us</a></li>
+            <li><a href="properties.html" class="hover:text-textHover transition-all">Properties</a></li>
+            <li><a href="services.html" class="hover:text-textHover transition-all">Services</a></li>
+            <li><a href="Contact.html" class="btn-primary flex justify-center items-center h-12 mt-4">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section class="w-full">
+        <div class="grid lg:grid-cols-2 container gap-0 lg:gap-20">
+            <div class="order-1 lg:order-0 " data-aos="fade-right">
+                <div class="mx-auto px-4 sm:px-6 lg:px-0">
+                    <div class="lg:py-25 order-1 flex gap-20 flex-col max-lg:mt-5.25">
+                        <div>
+                            <div class=" -translate-x-4 pb-0">
+                                <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                            </div>
+
+                            <div class="space-y-6">
+                                <h1 class="section-title">
+                                    Our Journey
+                                </h1>
+
+                                <p class="section-desc">
+                                    Our story is one of continuous growth and evolution. We started as a small team with
+                                    big dreams, determined to create a real estate platform that transcended the
+                                    ordinary. Over the years, we've expanded our reach, forged valuable partnerships,
+                                    and gained the trust of countless clients.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5 w-full">
+
+                            <div class="card-feature-1 w-full">
+                                <span class="font-bold text-3xl 3xl:text-[40px] leading-[150%]">200+</span>
+                                <p class="text-p font-medium text-sm xl:text-base 3xl:text-[18px]">Happy Customers</p>
+                            </div>
+
+                            <div class="card-feature-1 w-full">
+                                <span class="font-bold text-3xl 3xl:text-[40px] leading-[150%]">10k+</span>
+                                <p class="text-p font-medium text-sm xl:text-base 3xl:text-[18px]">Properties For
+                                    Clients</p>
+                            </div>
+
+                            <div class="card-feature-1 w-full col-span-2 xl:col-span-1 text-center xl:text-left">
+                                <span class="font-bold text-3xl 3xl:text-[40px] leading-[150%]">16+</span>
+                                <p class="text-p font-medium text-sm xl:text-base 3xl:text-[18px]">Years of Experience
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class=" bg-background order-0 lg:order-1 px-4 py-0 lg:px-0 lg:py-0 row" data-aos="fade-left">
+                <img src="./assets/images/heroImage-aboutUs.png" alt="Hero Image">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full max-lg:mt-15.25">
+        <div class="container flex lg:items-center justify-between md:gap-20 max-lg:flex-col gap-10">
+            <div>
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="space-y-6">
+                    <h1 class="section-title">
+                        Our Values
+                    </h1>
+
+                    <p class="section-desc">
+                        Our story is one of continuous growth and evolution. We started as a small team with big dreams,
+                        determined to create a real estate platform that transcended the ordinary.
+                    </p>
+                </div>
+            </div>
+            <div class="grid border border-border shadow-[0_0_0_10px_#191919] rounded-2xl p-4 sm:p-6 max-w-250">
+                <div class="md:border-b md:border-border grid grid-cols-1 md:grid-cols-2 pb-7.5 gap-5">
+                    <div
+                        class="flex flex-col gap-3.5 md:gap-5 md:border-r border-border md:pr-7.5 max-md:border-b max-md:row max-md:pb-5">
+                        <div class="flex items-center gap-3.5">
+                            <img src="./assets/icons/graduation-cap.png" alt="Graduation Cap" class="value-icon">
+                            <h3 class="value-title">Trust</h3>
+                        </div>
+                        <p class="value-text">
+                            Trust is the cornerstone of every successful real estate transaction.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3.5 md:gap-5 md:pl-7.5 max-md:border-b max-md:row max-md:pb-5 border-border">
+                        <div class="flex items-center gap-3.5">
+                            <img src="./assets/icons/star.png" alt="Star" class="value-icon">
+                            <h3 class="value-title">Excellence</h3>
+                        </div>
+                        <p class="value-text">
+                            We set the bar high for ourselves. From the properties we list to the services we provide.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 md:pt-7.5 gap-5">
+                    <div
+                        class="flex flex-col gap-3.5 md:gap-5 md:border-r border-border max-md:border-b max-md:row max-md:pb-5">
+                        <div class="flex items-center gap-3.5">
+                            <img src="./assets/icons/client.png" alt="Client" class="value-icon">
+                            <h3 class="value-title">Client-Centric</h3>
+                        </div>
+                        <p class="value-text">
+                            Your dreams and needs are at the center of our universe. We listen, understand.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-3.5 md:gap-5 md:pl-7.5 max-md:row">
+                        <div class="flex items-center gap-3.5">
+                            <img src="./assets/icons/star.png" alt="Star" class="value-icon">
+                            <h3 class="value-title">Our Commitment</h3>
+                        </div>
+                        <p class="value-text">
+                            We are dedicated to providing you with the highest level of service, professionalism, and
+                            support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-20">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="space-y-6 max-w-324.25">
+                    <h1 class="section-title">
+                        Our Achievements
+                    </h1>
+
+                    <p class="section-desc">
+                        Our story is one of continuous growth and evolution. We started as a small team with big dreams,
+                        determined to create a real estate platform that transcended the ordinary.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7.5 place-items-center min-h-64">
+                <div class="achievement-card h-full">
+                    <h3 class="achievement-title">3+ Years of Excellence</h3>
+                    <p class="achievement-tex">With over 3 years in the industry, we've
+                        amassed
+                        a wealth of knowledge and experience, becoming a go-to resource for all things real estate.
+                    </p>
+                </div>
+                <div class="achievement-card w-full">
+                    <h3 class="achievement-title">Happy Clients</h3>
+                    <p class="achievement-tex">Our greatest achievement is the satisfaction
+                        of
+                        our clients. Their success stories fuel our passion for what we do..
+                    </p>
+                </div>
+                <div class="achievement-card">
+                    <h3 class="achievement-title">Industry Recognition
+                    </h3>
+                    <p class="achievement-tex">We've earned the respect of our peers
+                        and
+                        industry leaders, with accolades and awards that reflect our commitment to excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-20">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="space-y-6 max-w-324.25">
+                    <h1 class="section-title">
+                        Navigating the Estatein Experience
+                    </h1>
+
+                    <p class="section-desc">
+                        At Estatein, we've designed a straightforward process to help you find and purchase your dream
+                        property with ease. Here's a step-by-step guide to how it all works.
+                    </p>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-x-7.5 gap-y-12.5 h-full">
+                <div>
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 01</p>
+                    </div>
+                    <div class="step-frame">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                Discover a World of Possibilities</h3>
+                            <p class="step-text">Your
+                                journey begins with exploring our carefully curated property listings. Use our
+                                intuitive
+                                search tools to filter properties based on your preferences, including location,
+                                type,
+                                size,
+                                and budget.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 02</p>
+                    </div>
+                    <div class="step-frame flex-1">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                Narrowing Down Your Choices</h3>
+                            <p class="step-text">Once
+                                you've found properties that catch your eye, save them to your account or make a
+                                shortlist. This allows you to compare and revisit your favorites as you make your
+                                decision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 03</p>
+                    </div>
+                    <div class="step-frame flex-1">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                Personalized Guidance</h3>
+                            <p class="step-text">Your
+                                Have questions about a property or need more information? Our dedicated team of real
+                                estate experts is just a call or message away.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 04</p>
+                    </div>
+                    <div
+                        class="p-px bg-linear-145 from-borderIcon-OurValues to-border from-0% to-36% flex-1 rounded-2xl rounded-tl-none">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                See It for Yourself</h3>
+                            <p class="step-text">Your
+                                Arrange viewings of the properties you're interested in. We'll coordinate with the
+                                property owners and accompany you to ensure you get a firsthand look at your
+                                potential new home.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 05</p>
+                    </div>
+                    <div class="step-frame flex-1">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                Making Informed Decisions</h3>
+                            <p class="step-text">Your
+                                Before making an offer, our team will assist you with due diligence, including
+                                property inspections, legal checks, and market analysis. We want you to be fully
+                                informed and confident in your choice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="step-header">
+                        <p class="2xl:text-xl text-base">Step 06</p>
+                    </div>
+                    <div class="step-frame flex-1">
+                        <div class="step-card">
+                            <h3 class="step-title">
+                                Getting the Best Deal</h3>
+                            <p class="step-text">Your
+                                We'll help you negotiate the best terms and prepare your offer. Our goal is to
+                                secure the property at the right price and on favorable terms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-20">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="space-y-6 max-w-324.25">
+                    <h1 class="text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold leading-tight">
+                        Meet the Estatein Team
+                    </h1>
+
+                    <p class="text-p leading-relaxed text-sm md:text-base 2xl:text-lg">
+                        At Estatein, our success is driven by the dedication and expertise of our team. Get to know the
+                        people behind our mission to make your real estate dreams a reality.
+                    </p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+                <div class="team-card">
+                    <div class="relative row">
+                        <img src="./assets/images/Max.png" alt="Max Mitchell" class="rounded-2xl">
+                        <img src="./assets/icons/twitter.png" alt="Twitter" class="team-badge">
+                    </div>
+                    <div class="team-body">
+                        <div class="team-meta">
+                            <h3 class="team-name">Max Mitchell
+                            </h3>
+                            <p class="team-role">Founder</p>
+                        </div>
+                        <div class="hello-box">
+
+                            <a href="mailto:max@estatein.com?subject=Hello Max&body=Hi Max 👋"
+                                class="flex justify-between items-center w-full">
+
+                                <span>Say Hello 👋</span>
+
+                                <div class="hello-send">
+
+                                    <img src="./assets/icons/Send.png" alt="Send" class="hello-send-icon">
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="relative row">
+                        <img src="./assets/images/Sarah.png" alt="Sarah Johnson" class="rounded-2xl">
+                        <img src="./assets/icons/twitter.png" alt="Twitter" class="team-badge">
+                    </div>
+                    <div class="team-body">
+                        <div class="team-meta">
+                            <h3 class="team-name">Sarah Johnson
+                            </h3>
+                            <p class="team-role">Chief Real Estate
+                                Officer</p>
+                        </div>
+                        <div class="hello-box">
+
+                            <a href="mailto:sarah@estatein.com?subject=Hello Sarah&body=Hi Sarah 👋"
+                                class="flex justify-between items-center w-full">
+
+                                <span>Say Hello 👋</span>
+
+                                <div class="hello-send">
+
+                                    <img src="./assets/icons/Send.png" alt="Send" class="hello-send-icon">
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="relative row">
+                        <img src="./assets/images/David.png" alt="David Brown" class="rounded-2xl">
+                        <img src="./assets/icons/twitter.png" alt="Twitter" class="team-badge">
+                    </div>
+                    <div class="team-body">
+                        <div class="team-meta">
+                            <h3 class="team-name">David Brown</h3>
+                            <p class="team-role">Head of Property
+                                Management</p>
+                        </div>
+                        <div class="hello-box">
+
+                            <a href="mailto:david@estatein.com?subject=Hello David&body=Hi David 👋"
+                                class="flex justify-between items-center w-full">
+
+                                <span>Say Hello 👋</span>
+
+                                <div class="hello-send">
+
+                                    <img src="./assets/icons/Send.png" alt="Send" class="hello-send-icon">
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="relative row">
+                        <img src="./assets/images/Micheal.png" alt="Michael Turner" class="rounded-2xl">
+                        <img src="./assets/icons/twitter.png" alt="Twitter" class="team-badge">
+                    </div>
+                    <div class="team-body">
+                        <div class="team-meta">
+                            <h3 class="team-name">Michael Turner
+                            </h3>
+                            <p class="team-role">Legal Counsel</p>
+                        </div>
+                        <div class="hello-box">
+
+                            <a href="mailto:michael@estatein.com?subject=Hello Michael&body=Hi Michael 👋"
+                                class="flex justify-between items-center w-full">
+
+                                <span>Say Hello 👋</span>
+
+                                <div class="hello-send">
+
+                                    <img src="./assets/icons/Send.png" alt="Send" class="hello-send-icon">
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="w-full 3xl:mt-27.5 xl:max-3xl:mt-22.5 mt-15.25">
+        <div class="container flex flex-col gap-10 3xl:gap-20 lg:max-3xl:gap-15">
+            <div class="w-full">
+                <div class="-translate-x-4 pb-0">
+                    <img src="./assets/images/Stars.png" alt="Stars" class="h-5 w-11.5">
+                </div>
+
+                <div class="space-y-6 max-w-324.25">
+                    <h1 class="text-[28px] xl:text-[38px] 2xl:text-[48px] font-semibold leading-tight">
+                        Our Valued Clients
+                    </h1>
+
+                    <p class="text-p leading-relaxed text-sm md:text-base 2xl:text-lg">
+                        At Estatein, we have had the privilege of working with a diverse range of clients across various
+                        industries. Here are some of the clients we've had the pleasure of serving
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-12.5 cardJs">
+
+            </div>
+
+        </div>
+        <div class="section-pagination container">
+            <div>
+                <p class="max-lg:hidden 3xl:text-xl sm:text-base cardCounter"><span>01</span> of 10</p>
+            </div>
+            <div class="flex gap-2.5 max-lg:w-full lg:justify-end justify-between">
+                <img src="./assets/icons/left-arrow.png" alt="left Arrow"
+                    class="section-pagination__arrow section-pagination__arrow--prev leftArrow">
+                <div class="lg:hidden flex">
+                    <p class="sm:hidden row gap-1 text-xs text-p cardCounter"><span class="text-white">01</span> of 10
+                    </p>
+                </div>
+                <img src="./assets/icons/right-arrow.png" alt="right Arrow"
+                    class="section-pagination__arrow section-pagination__arrow--next rightArrow">
+            </div>
+
+        </div>
+    </section>
+
+    <section
+        class="relative overflow-hidden mt-20 px-4 py-12.5 sm:max-3xl:px-20 sm:max-3xl:py-14.75 3xl:px-40.5 3xl:py-25 w-full border border-border">
+        <div
+            class="absolute lg:-left-5 -left-29 lg:bottom-0 max-lg:-top-5.25 h-71 max-lg:rotate-90 w-130.5 lg:w-1/4 bg-[url('../assets/images/CTA/CTA_BackGround.png')] bg-no-repeat bg-left bg-cover">
+        </div>
+        <div class=" absolute -right-22.5 -bottom-22.5 lg:-right-22.5 lg:top-0 h-full w-full lg:w-1/3
+            bg-[url('../assets/images/CTA/CTA_BackGround_2.png')] bg-no-repeat bg-right bg-cover"></div>
+        <div
+            class="container relative z-10 flex justify-between items-center lg:max-3xl:gap-37.5 3xl:gap-62.5 max-lg:flex-col gap-7.5">
+            <div class="flex flex-col 3xl:gap-3.5 sm:max-3xl:gap-2.5 gap-1.5">
+                <h2 class="3xl:text-5xl sm:max-3xl:text-[38px] text-[28px] font-semibold leading-[150%]">Start Your Real
+                    Estate
+                    Journey Today</h2>
+                <p class="3xl:text-lg leading-[150%] text-p text-sm sm:max-3xl:text-base">
+                    Your dream property is just a click away. Whether you're looking for a new home, a strategic
+                    investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take
+                    the first step towards your real estate goals and explore our available properties or get in touch
+                    with our team for personalized assistance.
+                </p>
+            </div>
+            <div class="max-sm:w-full">
+                <button
+                    class="btn-secondary 3xl:text-lg w-full py-3.5 text-sm sm:max-3xl:py-3.5 sm:max-3xl:px-5 3xl:py-4.5 3xl:px-6 mt-6 hover:bg-btnSecondary/60 whitespace-nowrap">
+                    Explore Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full" data-aos="fade-up">
+        <div
+            class="container bg py-12.5 3xl:py-25 3xl:px-40.5 border-t border-border flex xl:justify-between xl:items-center gap-20 max-xl:flex-col">
+            <div class="flex flex-col gap-7.5 3xl:min-w-134.5">
+                <div>
+                    <div class="flex gap-2.75 items-center">
+                        <img src="./assets/images/slogan-estatein.png" alt="Estatein Logo">
+                        <img src="./assets/images/TitleBrand.png" alt="Title Brand" class="h-full">
+                    </div>
+                </div>
+                <div
+                    class="flex items-center justify-between gap-2.5 border border-border rounded-xl 3xl:px-6 3xl:py-4.5 px-5 py-3.5 sm:max-xl:w-1/2 w-full max-w-full 3xl:max-w-105.75 focus-within:border-white focus-within:border-2 transition">
+                    <div class="flex items-center gap-2.5">
+                        <img src="./assets/icons/email-box.png" alt="Email Box">
+                        <input type="email" placeholder="Enter Your Email"
+                            class="bg-transparent placeholder:text-p outline-none border-none">
+                    </div>
+                    <button class="flex items-center justify-center rounded-full hover:bg-white/10 transition">
+                        <img src="./assets/icons/Send.png" alt="Send">
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 lg:grid-cols-5 lg:gap-3">
+                <div class="max-lg:border-r max-lg:border-border max-lg:pr-10">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Home</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Hero
+                                    Section</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Features</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Properties</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">FAQ's</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">About Us</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Story</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Works</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Team</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Testimonials</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Clients</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-4 3xl:gap-7.5 max-lg:row-start-2 max-lg:col-start-2 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Services</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Valuation
+                                Mastery</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Strategic
+                                Marketing</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Negotiation
+                                Wizardry</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Closing
+                                Success</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Property
+                                Management</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="max-lg:col-span-1 max-lg:row-start-2 max-lg:border-r max-lg:border-border max-lg:pr-10 lg:col-start-3 lg:row-start-1">
+                    <div class="flex flex-col gap-4 3xl:gap-7.5 max-lg:border-b max-lg:border-border max-lg:pb-4">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">
+                            Properties</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Portfolio</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end pt-4 max-lg:border-b max-lg:border-border max-lg:pb-4 lg:hidden">
+                        <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact
+                            Us</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                    Form</a></li>
+                            <li><a href="#"
+                                    class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                    Offices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 3xl:gap-7.5 3xl:justify-self-end max-lg:hidden">
+                    <h4 class="text-p text-base xl:max-3xl:text-lg 3xl:text-xl leading-6 -tracking-[0.6%]">Contact Us
+                    </h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Contact
+                                Form</a></li>
+                        <li><a href="#"
+                                class="hover:text-btnSecondary hover:underline transition text-sm xl:max-3xl:text-base 3xl:text-lg leading-6 -tracking-[0.6%]">Our
+                                Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-background-secondary py-7.5">
+            <div class="container justify-center md:justify-between items-center flex max-md:flex-col max-md:gap-5">
+                <div class="flex 3xl:gap-9.5 gap-2.5 max-md:order-2 max-md:flex-col items-center">
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">@2023 Estatein.
+                        All Rights Reserved.</p>
+                    <p class="text-sm 3xl:text-lg leading-6 -tracking-[0.6%]">Terms &
+                        Conditions</p>
+                </div>
+                <div class="flex gap-2.5 max-md:order-1">
+                    <img src="./assets/icons/facebook.png" alt="facebook"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/linkedin.png" alt="linkedin"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/twitter.png" alt="twitter"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                    <img src="./assets/icons/youtube.png" alt="youtube"
+                        class="md:p-3.5 p-5 rounded-full bg-background hover:bg-white/10 transition cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="aboutUs.js"></script>
+
+</body>
+
+</html>
